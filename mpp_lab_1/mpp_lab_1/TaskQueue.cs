@@ -7,7 +7,8 @@ namespace mpp_lab_1
     public delegate void TaskDelegate();
     class TaskQueue
 	{
-		private BlockingCollection<TaskDelegate> FuncQueue = new BlockingCollection<TaskDelegate>(new ConcurrentQueue<TaskDelegate>());
+        static object locker = new object();
+        private BlockingCollection<TaskDelegate> FuncQueue = new BlockingCollection<TaskDelegate>(new ConcurrentQueue<TaskDelegate>());
 		private int queueCount;
 
         public TaskQueue(int queueCount)
@@ -22,24 +23,27 @@ namespace mpp_lab_1
 
         public void threadWork()
         {
-            while (true)
+            lock (locker)
             {
-                var task = FuncQueue.Take();
-                try
+                while (true)
                 {
-                    task();
-                }
-                catch (ThreadStateException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                catch (ThreadAbortException ex)
-                {
-                    Thread.ResetAbort();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
+                    var task = FuncQueue.Take();
+                    try
+                    {
+                        task();
+                    }
+                    catch (ThreadStateException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    catch (ThreadAbortException ex)
+                    {
+                        Thread.ResetAbort();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
                 }
             }
         }

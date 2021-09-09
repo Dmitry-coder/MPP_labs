@@ -5,19 +5,30 @@ namespace mpp_lab_1
 {
 	class Program
 	{
-		static void procID()
+		static int x = 0;
+		static int y = 1;
+		static object locker = new object();
+		static void count()
 		{
-			Console.WriteLine("текущий id = " + Thread.CurrentThread.ManagedThreadId);
-			Thread.Sleep(100);
+			lock (locker)
+			{
+				x = 1;
+				for (int i = 1; i < 6; i++)
+				{
+					Console.WriteLine("Поток #{0}: {1}", y, x);
+					x++;
+					Thread.Sleep(100);
+				}
+				y++;
+				
+			}
 		}
 		static void Main(string[] args)
 		{
-			//Console.WriteLine("Hello World!");
 			TaskQueue taskQueue = new TaskQueue(3);
-			Console.WriteLine("текущий id = " + Thread.CurrentThread.ManagedThreadId);
 			for (int i = 0; i < 3; i++)
 			{
-				taskQueue.EnqueueTask(procID);
+				taskQueue.EnqueueTask(count);
 			}
 			Console.ReadLine();
 		}
