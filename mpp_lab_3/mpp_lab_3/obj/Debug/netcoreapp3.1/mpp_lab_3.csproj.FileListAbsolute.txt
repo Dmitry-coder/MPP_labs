@@ -1,0 +1,13 @@
+C:\MyLangC\mpp_lab_3\mpp_lab_3\bin\Debug\netcoreapp3.1\mpp_lab_3.exe
+C:\MyLangC\mpp_lab_3\mpp_lab_3\bin\Debug\netcoreapp3.1\mpp_lab_3.deps.json
+C:\MyLangC\mpp_lab_3\mpp_lab_3\bin\Debug\netcoreapp3.1\mpp_lab_3.runtimeconfig.json
+C:\MyLangC\mpp_lab_3\mpp_lab_3\bin\Debug\netcoreapp3.1\mpp_lab_3.runtimeconfig.dev.json
+C:\MyLangC\mpp_lab_3\mpp_lab_3\bin\Debug\netcoreapp3.1\mpp_lab_3.dll
+C:\MyLangC\mpp_lab_3\mpp_lab_3\bin\Debug\netcoreapp3.1\mpp_lab_3.pdb
+C:\MyLangC\mpp_lab_3\mpp_lab_3\obj\Debug\netcoreapp3.1\mpp_lab_3.csprojAssemblyReference.cache
+C:\MyLangC\mpp_lab_3\mpp_lab_3\obj\Debug\netcoreapp3.1\mpp_lab_3.AssemblyInfoInputs.cache
+C:\MyLangC\mpp_lab_3\mpp_lab_3\obj\Debug\netcoreapp3.1\mpp_lab_3.AssemblyInfo.cs
+C:\MyLangC\mpp_lab_3\mpp_lab_3\obj\Debug\netcoreapp3.1\mpp_lab_3.csproj.CoreCompileInputs.cache
+C:\MyLangC\mpp_lab_3\mpp_lab_3\obj\Debug\netcoreapp3.1\mpp_lab_3.dll
+C:\MyLangC\mpp_lab_3\mpp_lab_3\obj\Debug\netcoreapp3.1\mpp_lab_3.pdb
+C:\MyLangC\mpp_lab_3\mpp_lab_3\obj\Debug\netcoreapp3.1\mpp_lab_3.genruntimeconfig.cache
